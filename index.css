@@ -5,6 +5,7 @@
 }
 
 html {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     text-align: center;
     color: #fff;
@@ -22,7 +23,8 @@ left: 10px;
 }
 
 .my_projects a{
-    color: blue;
+    font-weight: bold;
+    color: white;
 }
 
 #mailme {
