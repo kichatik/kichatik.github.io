@@ -1,0 +1,330 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-left h1 {
+    margin: 0;
+}
+
+h1 a {
+    color: #fff; /* Устанавливаем белый цвет текста */
+    text-decoration: none; /* Удаляем подчеркивание у ссылок */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Устанавливаем белый цвет текста */
+    text-decoration: none; /* Удаляем подчеркивание у ссылок */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Устанавливаем серый цвет текста при наведении */
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для разделов */
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    font-size: 24px;
+}
+
+/* Стили для footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.waiting {
+    height: 604px;
+    background: url(123.jpg) center center/cover no-repeat;
+    padding: 85px 0 75px 0;
+}
+
+.waiting .waiting_header, .finish .finish_header, .waiting .waiting_header {
+    color: white;
+    /* font-family: Roboto; */
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.waiting .waiting_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+.waiting .waiting_wrapper .waiting_item {
+    width: 339px;
+    text-align: center;
+    overflow: hidden; /* Для скрытия выходящих за рамки изображений */
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_img {
+    width: 100%;
+    display: block;
+    transition: transform 1s;
+    border-radius: 20px; /* Применяем радиус скругления к изображению при наведении */
+}
+
+.waiting .waiting_wrapper .waiting_item:hover .waiting_img {
+    transform: scale(1.2);
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_descr {
+    margin-top: 35px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.optimization {
+    min-width: 550px;
+    padding: 102px 0 107px 0;
+}
+
+.optimization .optimization_header {
+    margin-left: 391px;
+    color: #299cbd;
+    /* font-family: "Roboto - Black"; */
+    font-size: 29px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.optimization .optimization_text {
+    margin-top: 25px;
+    margin-left: 391px;
+    color: #4a4a4a;
+    /* font-family: "Roboto Light"; */
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.optimization .optimization_text span {
+    /* font-family: "Roboto - Bold"; */
+    font-weight: 700;
+}
+
+.optimization .optimization_img {
+    position: absolute;
+    top: -54px;
+    left: -240px;
+    z-index: -1;
+}
+
+.finish {
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url(stalinka.jpg) center center/cover no-repeat;
+}
+
+.finish .finish_wrapper {
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+    gap: 20px; /* Добавим промежуток между элементами */
+    flex-wrap: wrap; /* Позволим элементам переноситься на новую строку */
+}
+
+.finish .finish_wrapper .finish_item {
+    width: 204px;
+}
+
+.finish .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff;
+    border-radius: 25%;
+}
+
+.finish .finish_wrapper .finish_item .finish_descr {
+    margin-top: 25px;
+    text-align: center;
+    color: #efefef;
+    /* font-family: Roboto; */
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+
+}
+
+.gift {
+    min-height: 200px;
+    padding: 10px 0;
+    background: url(12.jpg) center center/cover no-repeat;
+}
+
+.gift .gift_img {
+    display: block;
+    margin: 40px auto;
+}
+
+.gift .gift_text {
+    margin-top: 25px;
+    color: white;
+    /* font-family: "Roboto Light;" */
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.gift .gift_btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gift_btn {
+    display: block; /* Превращаем кнопку в блочный элемент */
+    margin: 0 auto; /* Устанавливаем автоматичесные отступы слева и справа */
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4b2b;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gift_btn:hover {
+    background-color: #ff6347;
+}
+
+.gallery {
+    column-count: 4; /* Распределяет изображения по 4 столбцам */
+    column-gap: 50px; /* Отступ между столбцами */
+}
+
+.gallery img {
+    width: 100%; /* Чтобы изображения занимали всю доступную ширину внутри столбцов */
+    height: 300px; /* Задайте желаемую высоту для изображений */
+    display: block;
+    margin-bottom: 50px; /* Отступ между изображениями */
+    object-fit: cover; /* Убедитесь, что изображения заполняют всю область и сохраняют пропорции */
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(back.jpg) center center/cover no-repeat;
+    color:white
+}
+
+.contact {
+    text-align: center; /* чтобы текст внутри блока был по центру */
+}
+
+#contact {
+    background-color: #a3a3a3; /* Серый фон */
+    padding: 50px 0; /* Отступы для контента */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    text-align: center;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 100%; /* Ширина карты занимает всю доступную ширину */
+    max-width: 600px; /* Максимальная ширина карты */
+    margin: 20px auto; /* Центрируем карту и добавляем отступы сверху и снизу */
+}
+
+.map iframe {
+    width: 100%; /* Ширина iframe равна 100% ширины родительского контейнера */
+    height: 300px; /* Высота карты (можно настроить по вашему усмотрению) */
+    display: block; /* Сделаем iframe блочным элементом, чтобы применялись отступы */
+    border: none; /* Убираем границу у iframe */
+}
+
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ff6347;
+}
