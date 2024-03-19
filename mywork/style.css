@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(img/car.png) center center/cover no-repeat;
+}
+
+.container {
+    color: white;
+    max-width: 1300px; /* Ширина контейнера */
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+}
+
+.waiting_header {
+    color: white;
+    font-weight: bold; /* Делаем текст жирным */
+    font-size: 50px; /* Устанавливаем размер текста */
+}
+
+.sframe {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Выравниваем элементы по вертикали */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.component {
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+}
+
+.component p {
+    word-wrap: break-word;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+    gap: 200px; /* Добавим промежуток между элементами */
+    flex-wrap: wrap; /* Позволим элементам переноситься на новую строку */
+}
+
+.component {
+    width: 204px; /* Добавим ширину для компонентов */
+}
+
+
+.orange-button {
+    background-color: rgb(236, 114, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tframe {
+    background-color: rgb(236, 114, 0);
+    display: flex;
+}
+
+.header {
+    margin-left: 60px;
+    font-weight: bold;
+    font-size: 25px; /* Устанавливаем размер текста */
+    color: white;
+    justify-content: center;
+}
+
+.fframe {
+    background-color: black;
+    display: flex;
+}
+
+.w_header {
+    color: white;
+    font-size: 30px; /* Устанавливаем размер текста */
+    justify-content: center;
+    padding-right: 20px; /* Отступ справа, чтобы отделить текст от изображения */
+    margin-left: 100px;
+}
+
+.image-container {
+    margin-top: 20px;
+    border-radius: 50%; /* Делаем контейнер круглым */
+    overflow: hidden; /* Обрезаем изображение, чтобы оно соответствовало форме контейнера */
+    margin-left: 220px;
+    margin-bottom: 100px;
+}
+
+.image-container img {
+    width: 600px; /* Задаем размер изображения */
+    height: auto;
+}
+
+.fvframe {
+    background-color: black;
+    display: flex;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Учитываем полный размер элемента, включая границы и отступы */
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+
