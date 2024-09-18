@@ -5,6 +5,7 @@ const KEYS = {
 };
 
 let game = {
+    running: true,
     ctx: null,
     platform: null,
     ball: null,
@@ -153,7 +154,6 @@ game.ball = {
     collideWorldBounds() {
         let x = this.x + this.dx;
         let y = this.y + this.dy;
-
 
         let ballLeft = x;
         let ballRight = ballLeft + this.width;
