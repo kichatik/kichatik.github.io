@@ -59,7 +59,7 @@ let game = {
         for (let key in this.sprites) {
             this.sprites[key] = new Image();
             this.sprites[key].src = "img/" + key + ".png"; 
-            this.sprites[key].addEventListener("load", onImageLoad);
+            this.sprites[key].addEventListener("load", onResourceLoad);
         }
     },
     preloadAudio(onResourceLoad) {
