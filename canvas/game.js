@@ -193,7 +193,7 @@ game.platform = {
     },
     getTouchOffset(x) {
         let diff = (this.x + this.width) - x;
-        let offset = this.width - diff;
+        let offset = this.width = diff;
         let result = 2 * offset / this.width;
         return result -1;
     }
