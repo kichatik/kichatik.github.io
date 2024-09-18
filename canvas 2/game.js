@@ -26,7 +26,12 @@ let game = {
     },
     init() {
         this.ctx = document.getElementById("mycanvas").getContext("2d");
+        this.setTextFonts();
         this.setEvents();
+    },
+    setTextFonts() {
+        this.ctx.font = "20px Arial";
+        this.ctx.fillStyle = "#FFFFFF";
     },
     setEvents() {
         window.addEventListener("keydown", e => {
@@ -48,7 +53,7 @@ let game = {
         let onResourceLoad = () => {
             ++loaded;
             if (loaded >= required) {
-                callback;
+                callback();
             }
         };
 
@@ -93,7 +98,7 @@ let game = {
         ++this.score;
 
         if (this.score >= this.blocks.length) {
-            this.render("youre win")
+            this.end("youre win");
         }
     },
     collideBlocks() {
@@ -125,6 +130,7 @@ let game = {
             this.ball.x, this.ball.y, this.ball.width, this.ball.height); 
         this.ctx.drawImage(this.sprites.platform, this.platform.x, this.platform.y);
         this.renderBlocks();
+        this.ctx.fillText('Score: ' + this.score, 15, 20);
     },
     renderBlocks() {
         for (let block of this.blocks) {
@@ -161,6 +167,15 @@ game.ball = {
     start() {
         this.dy = -this.velocity;
         this.dx = game.random(-this.velocity, this.velocity);
+        this.animate();
+    },
+    animate() {
+        setInterval(() => {
+            ++this.frame;
+            if (this.frame > 3) {
+                this.frame = 0;
+            }
+        }, 100);
     },
     move() {
         if (this.dy) {
@@ -199,12 +214,15 @@ game.ball = {
         if (ballLeft < worldLeft) {
             this.x = 0;
             this.dx = this.velocity;
+            game.sounds.bump.play();
         } else if (ballRight > worldRight) {
             this.x = worldRight - this.width;
             this.dx = -this.velocity;
+            game.sounds.bump.play();
         } else if (ballTop < worldTop) {
             this.y = 0;
             this.dy = this.velocity;
+            game.sounds.bump.play();
         } else if (ballBottom > worldBottom) {
             game.end('game over');
         }
