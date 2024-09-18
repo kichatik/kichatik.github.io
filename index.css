@@ -18,8 +18,8 @@ html {
 }
 
 .my_projects {
-display: block;
-left: 10px;
+    display: block;
+    left: 10px;
 }
 
 .my_projects a{
@@ -27,7 +27,7 @@ left: 10px;
     color: white;
 }
 
+
 #mailme {
     color: aliceblue;
 }
-
