@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "%3Ckichatik%3E.github.io/todo/precache-manifest.4e052feea7fa073094a0bfba8ea56ecc.js"
+  "/todo/precache-manifest.5cdbae5c42dea4cf489b1f075c4fa5d0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("%3Ckichatik%3E.github.io/todo/index.html", {
+workbox.routing.registerNavigationRoute("/todo/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
