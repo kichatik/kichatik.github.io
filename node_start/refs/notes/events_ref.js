@@ -12,6 +12,6 @@ logger.on('message', data => {
           console.log(data)
 })
 
-logger.log('Hello')
-logger.log('Hello')
-logger.log('Hello')
+logger.log('First')
+logger.log('Second')
+logger.log('Thiird')
