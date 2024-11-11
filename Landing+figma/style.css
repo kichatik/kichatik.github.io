@@ -1,0 +1,188 @@
+.navbar {
+    display: flex;
+    flex: 1;
+}
+.signup-button {
+    border-width: 0;
+    background-color: #313131;
+    color: white;
+    width: 140px; 
+    height: 50px; 
+    border-radius: 6px;
+}
+
+
+.input-group input {
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    padding: 15px; /* Добавляет отступы вокруг поля ввода */
+    border-radius: 6px;
+    border: none;
+}
+
+.input-group button {
+    width: 200px;
+    height: 80px;
+    background-color: #313131;
+    border-radius: 10px;
+    color: white;
+    border-width: 6px;
+    border-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.page-two {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    background-size: cover; /* Растягивает изображение, чтобы оно полностью заполнило фон */
+    background-position: center; /* Выравнивает изображение по центру */
+    min-height: 600px;
+    min-width: auto;
+}
+
+.images {
+    padding-top: 110px;
+    width: 50%; /* Указываем ширину блока с изображениями */
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 400px;
+}
+
+.images img {
+    width: 50%; /* Устанавливаем ширину изображений */
+    margin-bottom: 10px;
+}
+
+.h3 {
+    font-weight: bold;
+}
+
+.page-three {
+    padding-top: 20px;
+    display: flex;
+    padding-bottom: 200px;
+}
+
+.img_man {
+    background-image: url('pictures/man.png');
+    background-size: cover;
+    height: 550px;
+    width: 650px;
+    margin-left: 20px
+}
+
+@media (max-width: 1600px) {
+  .page-three {
+    flex-direction: column;
+  }
+  
+  .img_man {
+    order: 2; /* Указываем порядок, чтобы картинка была после блока с текстом */
+  }
+}
+
+.text_block {
+    justify-content: end;
+
+}
+
+.text {
+    display: flex;
+    margin-left: 20px; /* Добавляет отступ слева */
+}
+
+.text > div {
+    width: 50%; /* Устанавливает ширину блока для двух компонентов в строке */
+    flex: 1; /* Растягивает блок на всю доступную ширину */
+    margin: 10px 0; /* Отступ между блоками */
+}
+
+.text > p {
+    margin: 0; /* Убирает отступы у абзацев */
+}
+
+.square {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    justify-content: center; /* Выравнивание содержимого по центру по горизонтали */
+    align-items: center; /* Выравнивание содержимого по центру по вертикали */
+    text-align: center; /* Выравнивание текста по центру */
+    margin-left: 20px; /* Добавляет отступ слева */
+}
+
+p {
+    font-size: 14px; 
+    color: grey; 
+    padding-top: 30px;
+}
+
+.page-four {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D0EDF5;
+    background-size: cover;
+    background-position: center;
+}
+
+.contents {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.img_girl {
+    background-image: url('pictures/girl.png');
+    background-size: cover;
+    height: 600px;
+    width: 500px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1600px) {
+    .page-four {
+      flex-direction: column;
+    }
+    
+    .img_girl {
+      order: 2; /* Указываем порядок, чтобы картинка была после блока с текстом */
+    }
+}
+
+.rectangle {
+    width: 1500px;
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid #313131; /* Добавлено свойство border для границы */
+}
+
+.rectangle p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+}
+
+@media screen and (max-width: 770px) {
+    .rectangle {
+        width: 90%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .images {
+        display: none;
+    }
+    .img_man {
+        display: none;
+    }
+    .img_girl {
+        display: none;
+    }
+}
+
