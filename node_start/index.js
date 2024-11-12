@@ -24,11 +24,13 @@ const server = http.createServer((req, res) => {
 
                     req.on('end', () => {
                               const message = body.toString().split('=')[1]
+                    
+                              res.end(`
+                                        <h1>Ваше сообщение: ${message}</h1>
+                              `)
                     })
 
-                    res.end(`
-                              <h1>Ваше сообщение: ${message}</h1>
-                    `)
+          
           }
 })
 
