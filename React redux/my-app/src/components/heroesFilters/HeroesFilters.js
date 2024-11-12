@@ -3,33 +3,34 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 
-import {filtersFetching, filtersFetched, filtersFerhingError, activeFilterChanged} from '../../actions';
+import {filtersFetching, filtersFetched, filtersFetchingError, activeFilterChanged} from '../../actions';
 import Spinner from '../spinner/Spinner';
-import { render } from 'node-sass';
 
 const HeroesFilters = () => {
 
-          const {filters, filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
-          const dispatch = useDispatch();
-          const {request} = useHttp();
+    const {filters, filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
+    const dispatch = useDispatch();
+    const {request} = useHttp();
 
-          useEffect(() => {
-                    dispatch(filtersFetching());
-                    request('http://localhost:3001/filters')
-                              .then(data => dispatch(filtersFetched(data)))
-                              .catch(() => dispatch(filtersFerhingError()))
-          },[]);
+    useEffect(() => {
+        dispatch(filtersFetching());
+        request("http://localhost:3001/filters")
+            .then(data => dispatch(filtersFetched(data)))
+            .catch(() => dispatch(filtersFetchingError()))
 
-          if (filtersLoadingStatus === 'loading') {
-                    return <Spinner/>
-          } else if (filtersLoadingStatus === 'error') {
-                    return <h5 className='text-center mt-5'>Ошибка загрузки</h5>
-          }
+                              
+    },[]);
 
-          return renderFilters = (arr) => {
-                    if (arr.lenght === 0) {
-                              return <h5 className='text-center mt-5'>Фильтр не найден</h5>
-                    }
+    if (filtersLoadingStatus === 'loading') {
+        return <Spinner/>
+    } else if (filtersLoadingStatus === 'error') {
+        return <h5 className='text-center mt-5'>Ошибка загрузки</h5>
+    }
+
+    const renderFilters = (arr) => {
+        if (arr.lenght === 0) {
+            return <h5 className='text-center mt-5'>Фильтр не найден</h5>
+        }
 
                     return arr.map(({name, className, label}) => {
 
@@ -46,18 +47,18 @@ const HeroesFilters = () => {
                     })
           }
 
-          const elements = renderFilters(filters);
+            const elements = renderFilters(filters);
 
-          return (
-                    <div className="card shadow-lg mt-4">
-                              <div className="card-body">
-                                        <p className="card-text">Отфильтруйте героев по элементам</p>
-                                        <div className="btn-group">
-                                                  {elements}
-                                        </div>
-                              </div>
+            return (
+                <div className="card shadow-lg mt-4">
+                    <div className="card-body">
+                        <p className="card-text">Отфильтруйте героев по элементам</p>
+                        <div className="btn-group">
+                            {elements}
+                        </div>
                     </div>
-          )
+                </div>
+            )
 }         
 
 export default HeroesFilters;
