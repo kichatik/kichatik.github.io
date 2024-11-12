@@ -19,6 +19,17 @@ const server = http.createServer((req, res) => {
                                                   res.end(content)
                                         }
                               )
+                    } if (req.url === '/shop') {
+                              fs.readFile(
+                                        path.join(__dirname, 'views', 'index.html'),
+                                        'utf-8',
+                                        (err, content) => {
+                                                  if (err) {
+                                                            throw err
+                                                  }
+                                                  res.end(content)
+                                        }
+                              )
                     } else if (req.url === '/about') {
                               fs.readFile(
                                         path.join(__dirname, 'views', 'about.html'),
@@ -30,6 +41,18 @@ const server = http.createServer((req, res) => {
                                                   res.end(content)
                                         }
                               )
+                              
+                    } else if (req.url === '/api/users') {
+                              res.writeHead(200, { 
+                                        'Content-Type': 'text/json' 
+                              })
+
+                              const users = [
+                                        { name: 'Vasya', age: 20 },
+                                        { name: 'Elena', age: 23 }
+                              ]
+
+                              res.end(JSON.stringify(users))
                     }
           } else if (req.method === 'POST') {
                     const body = []
